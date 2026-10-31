@@ -1,8 +1,12 @@
-# Além do Preconceito
+# Isso Tem Nome
 
 Exposição educativa em português sobre racismo, transfobia, misoginia e LGBTfobia.
 Página única com navegação por seções, fotografias com créditos, animações por rolagem
 e um quiz de quatro situações com feedback e reinício.
+
+O projeto parte de uma ideia simples: dar nome ao preconceito é o primeiro passo
+para reconhecê-lo, enfrentá-lo e transformar relações. A identidade visual usa a
+logo **Isso Tem Nome** no cabeçalho, rodapé e ícone da aba do navegador.
 
 ## Executar
 
@@ -29,7 +33,7 @@ Use `npm run format` para formatar os arquivos.
 
 ## Organização
 
-- `index.html`: idioma, metadados e fontes.
+- `index.html`: idioma, metadados, fontes e favicon da logo.
 - `src/App.jsx`: composição da página.
 - `src/components/site`: seções e componentes usados pela exposição.
 - `src/content/data.jsx`: navegação e fotografias com fontes e licenças.
@@ -40,6 +44,8 @@ Use `npm run format` para formatar os arquivos.
 - `src/Base.module.css`: estilos de base e variáveis do tema.
 - `*.module.css`: estilos locais de cada componente.
 - `src/test`: testes da página, do menu e do quiz.
+- `src/assets/logo-isso-tem-nome.png`: logo principal usada na interface.
+- `public/logo-isso-tem-nome.png`: cópia usada como ícone da aba do navegador.
 
 Os retratos ficam em `src/assets/personagens`; os registros documentais, em `public/photos`.
 Créditos, links de origem e licenças, quando disponíveis, estão na página.
