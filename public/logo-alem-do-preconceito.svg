@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title desc">
+  <title id="title">Além do Preconceito</title>
+  <desc id="desc">Símbolo circular com barreiras cruzadas e o nome Além do Preconceito.</desc>
+  <rect width="520" height="120" rx="20" fill="#171717"/>
+  <g transform="translate(24 20)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="40" cy="40" r="31" stroke="#f5f0e8" stroke-width="4"/>
+    <path d="M19 51 61 29M19 29l42 22" stroke="#f5f0e8" stroke-width="4"/>
+    <path d="M40 9v62" stroke="#e86c4f" stroke-width="4"/>
+  </g>
+  <text x="112" y="57" fill="#f5f0e8" font-family="Arial, sans-serif" font-size="26" font-weight="700">Além do</text>
+  <text x="112" y="88" fill="#e86c4f" font-family="Arial, sans-serif" font-size="26" font-weight="700">Preconceito</text>
+</svg>

@@ -23,7 +23,7 @@
 .content {
   margin-inline: auto;
   display: flex;
-  height: 4rem;
+  height: 5rem;
   max-width: 80rem;
   align-items: center;
   justify-content: space-between;
@@ -80,7 +80,7 @@
 .mobileNav {
   position: fixed;
   inset: 0px;
-  top: 4rem;
+  top: 5rem;
   background-color: var(--ink);
   padding-inline: 1.5rem;
   padding-block: 2.5rem;

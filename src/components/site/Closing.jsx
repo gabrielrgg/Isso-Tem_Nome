@@ -1,7 +1,8 @@
 import styles from "./Closing.module.css";
 import { useRef } from "react";
-import { photos, nav } from "@/content/data";
+import { photoCredits, licenseUrl, nav } from "@/content/data";
 import { useScrollScene } from "@/lib/motion";
+import { Brand } from "./Brand";
 const actions = [
   { t: "Escute", d: "Quando alguém relata uma discriminação, acredite e não minimize." },
   {
@@ -77,9 +78,7 @@ export function Closing() {
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.about}>
-            <p className={styles.brand}>
-              Além do <span className={styles.brandAccent}>Preconceito</span>
-            </p>
+            <p className={styles.brand}><Brand /></p>
             <p className={styles.description}>
               Exposição digital educativa para jovens. Conteúdo sem fins comerciais.
             </p>
@@ -94,15 +93,33 @@ export function Closing() {
           <div className={styles.credits}>
             <p className={styles.creditsLabel}>Créditos das fotografias</p>
             <ul className={styles.creditList}>
-              {Object.values(photos).map((p) => (
-                <li key={p.src}>
+              {photoCredits.map(([key, p]) => (
+                <li key={key}>
                   {p.alt} — {p.credit},{" "}
                   <a href={p.source} target="_blank" rel="noreferrer" className={styles.sourceLink}>
-                    {p.license}
+                    Fonte
                   </a>
+                  {" · "}
+                  {p.license ? (
+                    <a
+                      href={licenseUrl(p.license)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={styles.sourceLink}
+                    >
+                      {p.license}
+                    </a>
+                  ) : (
+                    <span>{p.rights}</span>
+                  )}
                 </li>
               ))}
             </ul>
+            <p className={styles.sources}>
+              Enquadramentos de exibição ajustados; arquivos originais preservados. As fotografias
+              de arquivo de Dandara dos Santos e George Floyd têm direitos reservados; as fontes e
+              os créditos de reprodução estão indicados acima.
+            </p>
             <p className={styles.sourcesLabel}>Fontes dos dados</p>
             <p className={styles.sources}>
               <a

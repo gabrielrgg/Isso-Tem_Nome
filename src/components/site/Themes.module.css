@@ -190,7 +190,7 @@
 
 .article {
   display: flex;
-  min-height: 90vh;
+  min-height: 70vh;
   flex-direction: column;
   justify-content: center;
   border-top-style: solid;
@@ -252,4 +252,12 @@
     grid-column: span 6 / span 6;
     padding-left: 2rem;
   }
+}
+
+.storyLink {
+  margin-top: 1.5rem;
+  width: fit-content;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
 }

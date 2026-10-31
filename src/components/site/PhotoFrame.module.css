@@ -16,7 +16,9 @@
   position: absolute;
   inset: 0px;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
   background-color: var(--ink);
   padding: 1.5rem;
   color: var(--paper);
@@ -61,4 +63,17 @@
       color: var(--paper);
     }
   }
+}
+
+.fallbackEyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+.fallbackNote {
+  max-width: 28rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 0.7;
 }

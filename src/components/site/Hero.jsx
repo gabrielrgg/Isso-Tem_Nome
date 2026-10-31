@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 import { photos } from "@/content/data";
 import { PhotoFrame } from "./PhotoFrame";
 import { useScrollScene } from "@/lib/motion";
-const portraits = [photos.vini, photos.floyd, photos.gloria, photos.pabllo];
+const portraits = [photos.vini, photos.erika, photos.maria, photos.malala];
 export function Hero() {
   const ref = useRef(null);
   useScrollScene(ref, ({ gsap }) => {

@@ -14,9 +14,9 @@ const themes = [
     lede: "Racismo é tratar pessoas como inferiores por sua cor, raça ou origem étnica.",
     body: [
       "Ele aparece em xingamentos no estádio, mas também no que não se vê: na diferença de salário, na abordagem policial, em quem é seguido no shopping.",
-      "Vinícius Júnior enfrentou ofensas racistas repetidas no futebol espanhol. George Floyd foi morto por um policial nos EUA. Duas histórias, um mesmo sistema.",
+      "Vinícius Júnior denuncia o racismo no futebol. A morte de George Floyd expôs a violência policial. Nas duas histórias, reconhecer a desigualdade é o início da transformação.",
     ],
-    photos: [photos.vini, photos.floyd],
+    photos: [photos.vini, photos.floydPortrait],
   },
   {
     key: "transfobia",
@@ -27,9 +27,9 @@ const themes = [
     lede: "Transfobia é o preconceito contra pessoas trans e travestis — quem não se identifica com o gênero atribuído ao nascer.",
     body: [
       "Identidade de gênero é quem a pessoa é (mulher, homem, não binária). Orientação sexual é por quem ela sente atração. São coisas diferentes.",
-      "Respeitar começa pelo básico: usar o nome e os pronomes que a pessoa indica. O Brasil segue entre os países que mais registram assassinatos de pessoas trans.",
+      "Respeitar começa pelo nome e pelos pronomes que a pessoa indica. Erika Hilton representa a conquista de espaços políticos; a memória de Dandara dos Santos exige proteção à vida.",
     ],
-    note: "Espaço editorial reservado para futuras histórias de pessoas trans, contadas por elas.",
+    photos: [photos.erika, photos.dandara],
   },
   {
     key: "misoginia",
@@ -40,9 +40,9 @@ const themes = [
     lede: "Misoginia é o desprezo ou ódio às mulheres — e sustenta desigualdade e violência.",
     body: [
       "Ela está na piada que diminui, na interrupção constante, no salário menor pelo mesmo trabalho e no controle sobre o corpo e a roupa.",
-      "Em seu extremo, vira feminicídio: o assassinato de uma mulher por ser mulher, muitas vezes por parceiros ou ex-parceiros.",
+      "Maria da Penha enfrentou a violência doméstica e lutou por justiça. Malala Yousafzai defende o direito das meninas à educação. Suas trajetórias ligam segurança, autonomia e igualdade.",
     ],
-    note: "Espaço editorial reservado para futuras histórias de mulheres que enfrentaram a misoginia.",
+    photos: [photos.maria, photos.malala],
   },
   {
     key: "lgbt",
@@ -168,6 +168,9 @@ export function Themes() {
                   {b}
                 </p>
               ))}
+              <a className={styles.storyLink} href={`#historia-${t.key}`}>
+                Conheça as duas histórias <span aria-hidden>↗</span>
+              </a>
               <span className={cn(styles.accent, t.color)} aria-hidden data-motion="th-reveal" />
             </article>
           ))}

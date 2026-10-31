@@ -1,0 +1,312 @@
+.chapter {
+  position: relative;
+  background: var(--chapter-color);
+  color: var(--paper);
+  overflow: clip;
+  scroll-margin-top: 4rem;
+}
+.header {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: 4rem 1.25rem 2.5rem;
+}
+.eyebrow {
+  font-size: 0.68rem;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.title {
+  max-width: 62rem;
+  margin-top: 1.25rem;
+  font-size: clamp(2.5rem, 6.5vw, 6rem);
+  line-height: 0.98;
+  font-weight: 800;
+  text-wrap: balance;
+}
+.intro {
+  max-width: 42rem;
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+.pairNames {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+.pairNames a {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.3rem;
+}
+.storyGrid {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+.visual {
+  display: none;
+}
+.person {
+  padding-block: 1.5rem 3.5rem;
+  scroll-margin-top: 5rem;
+  min-width: 0;
+}
+.mobilePhoto {
+  aspect-ratio: 4 / 5;
+  max-height: 38rem;
+  margin-bottom: 2rem;
+}
+.copy {
+  padding: 1.5rem;
+  background: var(--ink);
+  border-top: 2px solid var(--paper);
+}
+.name {
+  margin-top: 1.25rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.98;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+.meta {
+  margin-top: 0.9rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: color-mix(in oklab, var(--paper) 65%, transparent);
+}
+.personTitle {
+  margin-top: 1.75rem;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.body,
+.impact {
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+.body {
+  color: color-mix(in oklab, var(--paper) 85%, transparent);
+}
+.impact {
+  border-left: 2px solid var(--chapter-color);
+  padding-left: 1rem;
+}
+.sources {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in oklab, var(--paper) 20%, transparent);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.sourcesLabel {
+  font-weight: 600;
+}
+.sources a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  width: fit-content;
+}
+.documentary {
+  margin-top: 1.5rem;
+}
+.documentaryPhoto {
+  aspect-ratio: 16 / 10;
+}
+.documentary > p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  margin-top: 0.6rem;
+  opacity: 0.8;
+}
+.next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: 2rem 1.25rem 3rem;
+  border-top: 1px solid color-mix(in oklab, var(--paper) 30%, transparent);
+}
+.next > span {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.next strong {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.1;
+}
+
+@media (min-width: 640px) {
+  .header {
+    padding-inline: 2rem;
+  }
+  .storyGrid {
+    padding-inline: 2rem;
+  }
+  .copy {
+    padding: 2rem;
+  }
+  .next {
+    padding-inline: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+  }
+  .storyGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+  .visual {
+    display: block;
+    position: sticky;
+    top: 5.5rem;
+    height: calc(100svh - 7rem);
+    min-height: 28rem;
+    margin-bottom: 2rem;
+  }
+  .layers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .layer {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .portrait {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .photoShade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 65%, var(--ink));
+    pointer-events: none;
+  }
+  .photoLabel {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1rem;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  .photoLabel span {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+  .visual[data-animated="true"] .layer {
+    position: absolute;
+    inset: 0;
+  }
+  .visual[data-animated="true"] .photoLabel {
+    font-size: 2rem;
+  }
+  .person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100svh;
+    padding-block: 2rem 4rem;
+  }
+  .mobilePhoto {
+    display: none;
+  }
+  .copy {
+    padding: 2rem;
+  }
+  .reverse .visual {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .reverse .steps {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .immersive .storyGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: none;
+    padding-inline: 0;
+    gap: 0;
+  }
+  .immersive .visual {
+    grid-area: 1 / 1;
+    width: 100%;
+    top: 4rem;
+    height: calc(100svh - 4rem);
+    margin: 0;
+  }
+  .immersive .steps {
+    grid-area: 1 / 1;
+    width: min(48%, 42rem);
+    margin-left: auto;
+    margin-right: max(2rem, calc((100vw - 80rem) / 2));
+    z-index: 1;
+  }
+  .immersive .copy {
+    background: color-mix(in oklab, var(--ink) 95%, transparent);
+  }
+  .immersive .photoLabel {
+    right: 56%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chapter {
+    background: var(--chapter-color);
+  }
+  .visual {
+    position: relative;
+    top: auto;
+  }
+  .person {
+    min-height: auto;
+  }
+  .immersive .storyGrid {
+    display: block;
+    max-width: 80rem;
+    padding-inline: 2rem;
+  }
+  .immersive .visual {
+    height: 34rem;
+  }
+  .immersive .steps {
+    width: 100%;
+    margin: 0;
+  }
+  .immersive .photoLabel {
+    right: 1rem;
+  }
+}

@@ -1,5 +1,5 @@
 :root {
-  --font-display: var(--font-display);
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
   --ink: oklch(0.22 0.018 255);
   --paper: oklch(0.968 0.007 85);
@@ -26,6 +26,7 @@
 html {
   line-height: 1.5;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
   -webkit-text-size-adjust: 100%;
 }
 body {

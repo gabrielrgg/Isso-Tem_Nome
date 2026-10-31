@@ -12,23 +12,23 @@ const stats = [
     label: "a mais de renda média do trabalho para pessoas brancas em relação a pretas e pardas",
     detail: "Desigualdade racial de rendimentos, 2024.",
     source: "IBGE — 2024",
-    url: "https://www.ibge.gov.br",
+    url: "https://agenciadenoticias.ibge.gov.br/media/com_mediaibge/arquivos/71016b2eb0a5feb8f7685271b1233db7.pdf",
   },
   {
     value: 80,
     color: styles.transfobia,
     label: "assassinatos de pessoas trans registrados no Brasil",
     detail: "Dossiê de assassinatos e violências contra pessoas trans, 2025.",
-    source: "ANTRA — 2025",
-    url: "https://antrabrasil.org",
+    source: "ANTRA — Dossiê 2026 (dados de 2025)",
+    url: "https://antrabrasil.org/wp-content/uploads/2026/01/dossie-antra-2026.pdf",
   },
   {
     value: 1568,
     color: styles.misoginia,
     label: "feminicídios registrados no Brasil",
     detail: "Mulheres mortas por serem mulheres, 2025.",
-    source: "Fórum Brasileiro de Segurança Pública — 2025",
-    url: "https://forumseguranca.org.br",
+    source: "FBSP — publicação de 2026 (dados de 2025)",
+    url: "https://forumseguranca.org.br/wp-content/uploads/2026/03/nota-tecnica-dia-mulher-2026.pdf",
   },
   {
     value: 2480,
@@ -37,7 +37,7 @@ const stats = [
     detail:
       "Dados de 2024 publicados no Anuário 2025. A categoria reúne homofobia e transfobia — não é só homofobia.",
     source: "FBSP — Anuário 2025 (dados de 2024)",
-    url: "https://forumseguranca.org.br",
+    url: "https://forumseguranca.org.br/wp-content/uploads/2025/09/anuario-2025.pdf",
   },
 ];
 const fmt = (n, d = 0) =>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { nav } from "@/content/data";
 import { cn } from "@/lib/utils";
+import { Brand } from "./Brand";
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -30,8 +31,8 @@ export function Header() {
   return (
     <header className={cn(styles.header, scrolled ? styles.scrolled : styles.transparent)}>
       <div className={styles.content}>
-        <a href="#inicio" className={styles.brand}>
-          Além do <span className={styles.brandAccent}>Preconceito</span>
+        <a href="#inicio" className={styles.brand} aria-label="Além do Preconceito — início">
+          <Brand />
         </a>
         <nav aria-label="Principal" className={styles.desktopNav}>
           <ul className={styles.links}>

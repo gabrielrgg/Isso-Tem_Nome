@@ -14,12 +14,18 @@ export function useScrollScene(ref, setup) {
       mm.add(
         {
           desktop: "(min-width: 768px)",
+          wide: "(min-width: 1024px)",
           mobile: "(max-width: 767px)",
           reduced: "(prefers-reduced-motion: reduce)",
         },
         (c) => {
           if (c.conditions?.reduced) return;
-          setup({ gsap, ScrollTrigger, desktop: Boolean(c.conditions?.desktop) });
+          return setup({
+            gsap,
+            ScrollTrigger,
+            desktop: Boolean(c.conditions?.desktop),
+            wide: Boolean(c.conditions?.wide),
+          });
         },
       );
     }, ref);
