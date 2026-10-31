@@ -1,0 +1,240 @@
+.section {
+  background-color: var(--ink);
+  padding-block: 6rem;
+  color: var(--paper);
+  @media (width >= 48rem) {
+    padding-block: 9rem;
+  }
+}
+
+.content {
+  margin-inline: auto;
+  display: grid;
+  max-width: 80rem;
+  gap: 3rem;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding-inline: 2rem;
+  }
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--misoginia);
+}
+
+.heading {
+  margin-top: 1rem;
+  font-size: 3.75rem;
+  line-height: 0.9;
+  font-weight: 800;
+  @media (width >= 48rem) {
+    font-size: 4.5rem;
+    line-height: 0.9;
+  }
+}
+
+.description {
+  margin-top: 1.5rem;
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+}
+
+.progress {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.progressStep {
+  height: 0.25rem;
+  flex: 1;
+  transition-property:
+    color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.completed {
+  background-color: var(--misoginia);
+}
+
+.current {
+  background-color: color-mix(in oklab, var(--paper) 60%, transparent);
+}
+
+.pending {
+  background-color: color-mix(in oklab, var(--paper) 15%, transparent);
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-color: color-mix(in oklab, var(--paper) 15%, transparent);
+  padding: 2rem;
+  @media (width >= 48rem) {
+    padding: 3rem;
+  }
+}
+
+.cardLabel {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--paper) 60%, transparent);
+}
+
+.score {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.result {
+  margin-top: 1rem;
+  max-width: 32rem;
+  font-size: 1.125rem;
+  line-height: 1.5556;
+  color: color-mix(in oklab, var(--paper) 80%, transparent);
+}
+
+.resetButton {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--paper);
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  font-weight: 600;
+  color: var(--ink);
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in oklab, var(--paper) 85%, transparent);
+    }
+  }
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.scene {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.375;
+  font-weight: 600;
+  @media (width >= 48rem) {
+    font-size: 1.875rem;
+    line-height: 1.375;
+  }
+}
+
+.options {
+  margin-top: 2rem;
+  :where(& > :not(:last-child)) {
+    margin-block-start: 0;
+    margin-block-end: 0.75rem;
+  }
+}
+
+.option {
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  padding-inline: 1.25rem;
+  padding-block: 1rem;
+  text-align: left;
+  transition-property:
+    color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.idle {
+  border-color: color-mix(in oklab, var(--paper) 20%, transparent);
+  &:hover {
+    @media (hover: hover) {
+      border-color: var(--paper);
+    }
+    @media (hover: hover) {
+      background-color: color-mix(in oklab, var(--paper) 5%, transparent);
+    }
+  }
+}
+
+.correct {
+  border-color: var(--lgbt);
+  background-color: color-mix(in oklab, var(--lgbt) 20%, transparent);
+}
+
+.incorrect {
+  border-color: var(--misoginia);
+  background-color: color-mix(in oklab, var(--misoginia) 20%, transparent);
+}
+
+.dimmed {
+  border-color: color-mix(in oklab, var(--paper) 10%, transparent);
+  opacity: 50%;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.feedback {
+  margin-top: 2rem;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-color: var(--misoginia);
+  padding-left: 1.25rem;
+}
+
+.feedbackTitle {
+  font-weight: 600;
+}
+
+.feedbackText {
+  margin-top: 0.5rem;
+  color: color-mix(in oklab, var(--paper) 80%, transparent);
+}
+
+.nextButton {
+  margin-top: 1.5rem;
+  background-color: var(--paper);
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  font-weight: 600;
+  color: var(--ink);
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in oklab, var(--paper) 85%, transparent);
+    }
+  }
+}
+@media (width >= 48rem) {
+  .introduction {
+    grid-column: span 4 / span 4;
+  }
+  .interaction {
+    grid-column: span 8 / span 8;
+  }
+}

@@ -1,0 +1,96 @@
+.section {
+  position: relative;
+  background-color: var(--ink);
+  color: var(--paper);
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--ink);
+}
+
+.content {
+  margin-inline: auto;
+  display: grid;
+  width: 100%;
+  max-width: 80rem;
+  align-items: center;
+  gap: 2rem;
+  padding-inline: 1.25rem;
+  padding-block: 6rem;
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding-inline: 2rem;
+  }
+}
+
+.photo {
+  aspect-ratio: 4/5;
+  @media (width >= 48rem) {
+    grid-column: span 5 / span 5;
+    aspect-ratio: 3/4;
+  }
+}
+
+.label {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--racismo);
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  line-height: 1.05;
+  font-weight: 700;
+  @media (width >= 48rem) {
+    font-size: 3.75rem;
+    line-height: 1.05;
+  }
+}
+
+.word {
+  display: inline;
+}
+
+.citation {
+  margin-top: 2rem;
+  max-width: 32rem;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: color-mix(in oklab, var(--paper) 75%, transparent);
+}
+
+.emphasis {
+  color: var(--paper);
+}
+
+.nextWrapper {
+  margin-top: 2.5rem;
+  overflow: hidden;
+}
+
+.nextLink {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+@media (width >= 48rem) {
+  .copy {
+    grid-column: span 7 / span 7;
+    padding-left: 1.5rem;
+  }
+}

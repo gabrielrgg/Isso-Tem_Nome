@@ -1,0 +1,227 @@
+.section {
+  background-color: var(--paper);
+}
+
+.content {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+  padding-block: 6rem;
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+    padding-block: 8rem;
+  }
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lgbt);
+}
+
+.heading {
+  margin-top: 1rem;
+  max-width: 48rem;
+  font-size: 3rem;
+  line-height: 0.95;
+  font-weight: 800;
+  @media (width >= 48rem) {
+    font-size: 4.5rem;
+    line-height: 0.95;
+  }
+}
+
+.actions {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1px;
+  background-color: var(--border);
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.action {
+  background-color: var(--paper);
+  padding: 2rem;
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 800;
+  color: color-mix(in oklab, var(--muted-foreground) 40%, transparent);
+}
+
+.actionTitle {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.3333;
+  font-weight: 700;
+}
+
+.actionDescription {
+  margin-top: 0.75rem;
+  line-height: 1.625;
+  color: var(--muted-foreground);
+}
+
+.conclusion {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  background-color: var(--racismo);
+  padding-inline: 1.25rem;
+  padding-block: 7rem;
+  color: var(--paper);
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+    padding-block: 10rem;
+  }
+}
+
+.conclusionTitle {
+  margin-inline: auto;
+  max-width: 80rem;
+  font-size: clamp(2.5rem, 7vw, 7rem);
+  line-height: 0.92;
+  font-weight: 800;
+}
+
+.line {
+  display: block;
+  overflow: hidden;
+}
+
+.lineText {
+  display: block;
+}
+
+.lineAccent {
+  display: block;
+  color: var(--ink);
+}
+
+.footer {
+  background-color: var(--ink);
+  padding-inline: 1.25rem;
+  padding-block: 4rem;
+  color: var(--paper);
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+}
+
+.footerContent {
+  margin-inline: auto;
+  display: grid;
+  max-width: 80rem;
+  gap: 3rem;
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.3333;
+  font-weight: 800;
+}
+
+.brandAccent {
+  color: var(--racismo);
+}
+
+.description {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4286;
+  color: color-mix(in oklab, var(--paper) 60%, transparent);
+}
+
+.navigation {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+  row-gap: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4286;
+}
+
+.navLink {
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+  &:hover {
+    @media (hover: hover) {
+      color: var(--paper);
+    }
+  }
+}
+
+.creditsLabel {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--paper) 50%, transparent);
+}
+
+.creditList {
+  margin-top: 1rem;
+  :where(& > :not(:last-child)) {
+    margin-block-start: 0;
+    margin-block-end: 0.5rem;
+  }
+  font-size: 0.875rem;
+  line-height: 1.4286;
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+}
+
+.sourceLink {
+  text-decoration-line: underline;
+  &:hover {
+    @media (hover: hover) {
+      color: var(--paper);
+    }
+  }
+}
+
+.sourcesLabel {
+  margin-top: 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--paper) 50%, transparent);
+}
+
+.sources {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4286;
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+}
+@media (width >= 48rem) {
+  .about {
+    grid-column: span 4 / span 4;
+  }
+  .credits {
+    grid-column: span 8 / span 8;
+  }
+}

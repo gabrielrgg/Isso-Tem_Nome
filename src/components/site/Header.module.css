@@ -1,0 +1,118 @@
+.header {
+  position: fixed;
+  inset-inline: 0px;
+  top: 0px;
+  z-index: 50;
+  color: var(--paper);
+  transition-property:
+    color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.scrolled {
+  background-color: color-mix(in oklab, var(--ink) 90%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.content {
+  margin-inline: auto;
+  display: flex;
+  height: 4rem;
+  max-width: 80rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  line-height: 1.5556;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.brandAccent {
+  color: var(--racismo);
+}
+
+.desktopNav {
+  display: none;
+  @media (width >= 48rem) {
+    display: block;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 1.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4286;
+}
+
+.navLink {
+  opacity: 80%;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  &:hover {
+    @media (hover: hover) {
+      opacity: 100%;
+    }
+  }
+}
+
+.progress {
+  height: 2px;
+  transform-origin: 0;
+  background-color: var(--racismo);
+}
+
+.mobileNav {
+  position: fixed;
+  inset: 0px;
+  top: 4rem;
+  background-color: var(--ink);
+  padding-inline: 1.5rem;
+  padding-block: 2.5rem;
+  @media (width >= 48rem) {
+    display: none;
+  }
+}
+
+.mobileLink {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 1.1111;
+  font-weight: 700;
+}
+
+.mobileNumber {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--paper) 40%, transparent);
+}
+@media (width >= 48rem) {
+  .menuButton {
+    display: none;
+  }
+}
+:where(.mobileLinks > :not(:last-child)) {
+  margin-block-start: 0;
+  margin-block-end: 1.25rem;
+}

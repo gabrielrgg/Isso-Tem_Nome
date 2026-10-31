@@ -1,0 +1,98 @@
+:root {
+  --font-display: var(--font-display);
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --ink: oklch(0.22 0.018 255);
+  --paper: oklch(0.968 0.007 85);
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --muted: oklch(0.92 0.01 85);
+  --muted-foreground: oklch(0.45 0.02 255);
+  --border: oklch(0.22 0.018 255 / 14%);
+  --ring: var(--racismo);
+  --racismo: oklch(0.57 0.13 40);
+  --transfobia: oklch(0.52 0.12 300);
+  --misoginia: oklch(0.6 0.14 2);
+  --lgbt: oklch(0.55 0.09 185);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid var(--border);
+}
+html {
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+ol,
+ul {
+  list-style: none;
+}
+img,
+svg {
+  display: block;
+  vertical-align: middle;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+[hidden] {
+  display: none !important;
+}
+::selection {
+  background: var(--racismo);
+  color: var(--paper);
+}
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
