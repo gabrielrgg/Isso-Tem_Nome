@@ -1,4 +1,4 @@
-:root {
+:global(:root) {
   --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
   --ink: oklch(0.22 0.018 255);
@@ -15,85 +15,85 @@
   --lgbt: oklch(0.55 0.09 185);
 }
 
-*,
-*::before,
-*::after {
+:global(*),
+:global(*::before),
+:global(*::after) {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0 solid var(--border);
 }
-html {
+:global(html) {
   line-height: 1.5;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   -webkit-text-size-adjust: 100%;
 }
-body {
+:global(body) {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:global(h1),
+:global(h2),
+:global(h3),
+:global(h4),
+:global(h5),
+:global(h6) {
   font-size: inherit;
   font-weight: inherit;
   font-family: var(--font-display);
   letter-spacing: -0.03em;
 }
-a {
+:global(a) {
   color: inherit;
   text-decoration: inherit;
 }
-b,
-strong {
+:global(b),
+:global(strong) {
   font-weight: bolder;
 }
-button,
-input,
-select,
-textarea {
+:global(button),
+:global(input),
+:global(select),
+:global(textarea) {
   font: inherit;
   color: inherit;
   background: transparent;
 }
-button {
+:global(button) {
   cursor: pointer;
 }
-button:disabled {
+:global(button:disabled) {
   cursor: default;
 }
-ol,
-ul {
+:global(ol),
+:global(ul) {
   list-style: none;
 }
-img,
-svg {
+:global(img),
+:global(svg) {
   display: block;
   vertical-align: middle;
 }
-img {
+:global(img) {
   max-width: 100%;
   height: auto;
 }
-[hidden] {
+:global([hidden]) {
   display: none !important;
 }
-::selection {
+:global(::selection) {
   background: var(--racismo);
   color: var(--paper);
 }
-:focus-visible {
+:global(:focus-visible) {
   outline: 2px solid var(--ring);
   outline-offset: 3px;
 }
 @media (prefers-reduced-motion: reduce) {
-  html {
+  :global(html) {
     scroll-behavior: auto;
   }
 }
